@@ -11,23 +11,23 @@
   
   
   
-  <meta name="description" content="Dozent: Dr. Fabian Schlotterbeck Deutsches Seminar, Universität Tübingenload package and data frame 1library(lme4)  ## Loading required package: Matrix1library(lmerTest)  ##  ## Attaching package">
+  <meta name="description" content="Dozent: Dr. Fabian Schlotterbeck Deutsches Seminar, Universität Tübingen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Statistische Methoden">
 <meta property="og:url" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/index.html">
 <meta property="og:site_name" content="流浪者夜歌">
-<meta property="og:description" content="Dozent: Dr. Fabian Schlotterbeck Deutsches Seminar, Universität Tübingenload package and data frame 1library(lme4)  ## Loading required package: Matrix1library(lmerTest)  ##  ## Attaching package">
+<meta property="og:description" content="Dozent: Dr. Fabian Schlotterbeck Deutsches Seminar, Universität Tübingen">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/Gruppenarbeit_NEU_files/figure-markdown_github/unnamed-chunk-4-1.png">
-<meta property="og:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/Gruppenarbeit_NEU_files/figure-markdown_github/unnamed-chunk-5-1.png">
-<meta property="og:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/Gruppenarbeit_NEU_files/figure-markdown_github/unnamed-chunk-6-1.png">
+<meta property="og:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/unnamed-chunk-4-1.png">
+<meta property="og:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/unnamed-chunk-5-1.png">
+<meta property="og:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/unnamed-chunk-6-1.png">
 <meta property="article:published_time" content="2020-04-30T19:37:16.000Z">
-<meta property="article:modified_time" content="2020-04-30T20:10:17.621Z">
+<meta property="article:modified_time" content="2020-04-30T20:16:22.619Z">
 <meta property="article:author" content="Hening">
 <meta property="article:tag" content="统计">
 <meta property="article:tag" content="R">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/Gruppenarbeit_NEU_files/figure-markdown_github/unnamed-chunk-4-1.png">
+<meta name="twitter:image" content="https://untertan.github.io/2020/04/30/Gruppenarbeit_NEU/unnamed-chunk-4-1.png">
   
     <link rel="alternate" href="/atom.xml" title="流浪者夜歌" type="application/atom+xml">
   
@@ -148,10 +148,9 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-         <a id="more"></a>  
-
-<pre><code>Dozent: Dr. Fabian Schlotterbeck
-Deutsches Seminar, Universität Tübingen</code></pre><p>load package and data frame</p>
+        <p> Dozent: Dr. Fabian Schlotterbeck<br> Deutsches Seminar, Universität Tübingen</p>
+<a id="more"></a>  
+<p>load package and data frame</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lme4)</span><br></pre></td></tr></table></figure>
 
 <pre><code>## Loading required package: Matrix</code></pre><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(lmerTest)</span><br></pre></td></tr></table></figure>
@@ -175,8 +174,9 @@ Deutsches Seminar, Universität Tübingen</code></pre><p>load package and data f
 
 <p>Aufgabe 1 Werft einen Blick auf die Verteilungen der Reaktionszeiten in<br>den vier Bedingungen. Histogram aller Reaktionszeiten in den vier<br>Bedingungen</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> levels(factor1))&#123;</span><br><span class="line">  <span class="keyword">for</span> (j <span class="keyword">in</span> levels(factor2))&#123;</span><br><span class="line">    hist(data[data$factor1==i &amp; data$factor2==j,]$rt, main = paste(i,j, sep=<span class="string">", "</span>))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<img src="/2020/04/30/Gruppenarbeit_NEU/unnamed-chunk-4-1.png" class="">
 
-<p><img src="Gruppenarbeit_NEU_files/figure-markdown_github/unnamed-chunk-4-1.png" alt=""></p>
+
 <pre><code>##Beschreibung der Aufgabe 1:
 Die vier Histogramme zeigen deutlich, wie die Reaktionszeiten in den vier Bedingungen verteilt sind. Auf der x-Achse sind die Reaktionszeiten angegeben, während auf der y-Achse die Häufigkeit aufgeführt ist. 
 Im Vergleich zu den anderen vier Bedingungen ist der Zahlenraum der Bedingung [level1.2, level2.2] am größten, nämlich von 0 bis 2500, danach kommt die Bedingung [level1.1, level2.1], dann die Bedingung [level1.1, level2.2] und zuletzt die Bedingung [level1.2, level2.1]. 
@@ -184,11 +184,13 @@ Es lässt sich eine deutliche Tendenz erkennen: die meisten Reaktionszeiten in d
 Wie die y-Achse auch zeigt, ist die Häufigkeit der Bedingung [level1.1, level2.1] am höchsten und der Zahlenraum der Bedingung [level1.1, level2.1] ist am größten.</code></pre><p>Aufgabe 2 Betrachtet eine simulierte Versuchsperson genauer. Histogram<br>der Reaktionszeiten des ersten Teilnehmers in den vier Bedingungen</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sub1 &lt;- subset(data, participant==<span class="string">"pp1"</span>)</span><br><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> levels(factor1))&#123;</span><br><span class="line">  <span class="keyword">for</span> (j <span class="keyword">in</span> levels(factor2))&#123;</span><br><span class="line">    hist(sub1[sub1$factor1==i &amp; sub1$factor2==j,]$rt, main = paste(i,j, sep=<span class="string">", "</span>))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="Gruppenarbeit_NEU_files/figure-markdown_github/unnamed-chunk-5-1.png" alt=""></p>
+<img src="/2020/04/30/Gruppenarbeit_NEU/unnamed-chunk-5-1.png" class="">
+
 <p>Quantil der Reaktionszeiten des ersten Teilnehmers in den vier<br>Bedingungen</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>))</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> levels(factor1))&#123;</span><br><span class="line">  <span class="keyword">for</span> (j <span class="keyword">in</span> levels(factor2))&#123;</span><br><span class="line">    qqnorm(sub1[data$factor1==i &amp; data$factor2==j,]$rt, main = paste(i,j, sep=<span class="string">", "</span>))</span><br><span class="line">    qqline(sub1[data$factor1==i &amp; data$factor2==j,]$rt, main = paste(i,j, sep=<span class="string">", "</span>))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="Gruppenarbeit_NEU_files/figure-markdown_github/unnamed-chunk-6-1.png" alt=""></p>
+<img src="/2020/04/30/Gruppenarbeit_NEU/unnamed-chunk-6-1.png" class="">
+
 <pre><code>Anhand der Form des Histograms und Quantils ist es deutlich, dass die Verteilung grob der Normalverteilung folgt.
 
 Beschreibung der Aufgabe 2:
